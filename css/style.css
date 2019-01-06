@@ -58,6 +58,15 @@
     background-color: #80868C;
   }
 
+  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000!important;
+    background-color: black!important;
+  }
+
   /* ==========================================================================
      Profile section
      ========================================================================== */

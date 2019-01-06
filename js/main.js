@@ -1,20 +1,9 @@
+  'use strict';
 
-// Create a div that appears after scroll, stays permanently at bottom of page
-//
-// function ready() {
-//   $(function(){
-//       $(window).scroll(function() {
-//         $(document).scrollTop() > 500 ? $('.footer:hidden').fadeIn() : $('.footer:visible').fadeOut();
-//         let prueba = $(document).scrollTop();
-//         console.log(prueba);
-//       });
-//   });
-//
-// };
-// window.onload = ready();
+
+
 
 //Prueba to get the width of the viewport
-
 //when everything has loaded
 function ready() {
   let counter = 0;
@@ -68,22 +57,6 @@ function ready() {
     * of the same(projectSectionText)(all of that when is a tablet, this will help to float the text around the image)
     */
    function putImageAsChild() {
-    //  let containers = document.querySelectorAll(".project-section-container");
-    //  let containerChildren;
-    //  let projectSectionJs;
-    //  let projectSectionText;
-    //  let containsProjectSectionJsClass;
-
-    //  for (let i = 0; i < containers.length; i++) {
-    //    containerChildren = containers[i].children;
-    //    projectSectionJs = containerChildren[1];
-    //    projectSectionText = containerChildren[0];
-    //    containsProjectSectionJsClass = containerChildren[1].classList.contains("project-section-js");
-    //    if(containsProjectSectionJsClass) {
-    //      containers[i].removeChild(projectSectionJs);
-    //      projectSectionText.appendChild(projectSectionJs);
-    //    }
-    //  } //End i for loop
 
     let projectSectionJs = document.querySelectorAll(".project-section-js");
     let projectSectionText;
@@ -129,16 +102,7 @@ function ready() {
    };
 
    checkDeviceSize();
-  // const aboutLink = document.querySelector(".nav-link");
-  // const showSize = () => {
-  //   console.log(`
-  //     Width ${getWidth()}
-  //     `);
-  //   console.log(`
-  //     Height ${getHeight()}
-  //   `);
-  // };
-  //  aboutLink.addEventListener('click', showSize);
+
 
 /*
  * Smooth Scrolling Effect with Accesibility Compliance
@@ -186,18 +150,49 @@ $('a[href*="#"]')
      ========================================================================== */
 
   // When the user scrolls down 500px from the top of the document, show the button
-  window.onscroll = function() {scrollFunction()};
-  let backToTop = document.getElementById("back-to-top-js");
-  function scrollFunction() {
-     if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-       backToTop.style.display = "block";
-       setTimeout(function() {
-         backToTop.style.display = "none";
-       }, 5000);
-     } else {
-       backToTop.style.display = "none";
-     }
-   }
+  // window.onscroll = function() {scrollFunction()};
+  // let backToTop = document.getElementById("back-to-top-js");
+  // function scrollFunction() {
+  //    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+  //      backToTop.style.display = "block";
+  //      setTimeout(function() {
+  //        backToTop.style.display = "none";
+  //      }, 5000);
+  //    } else {
+  //      backToTop.style.display = "none";
+  //    }
+  //  }
+
+
+  /* ==========================================================================
+      Sticky Navigation Bar
+     ========================================================================== */
+     let navVariables = (function() {
+       // Get the navbar
+       let navbar = document.getElementById("navbarJs");
+       // Get the offset position of the navbar
+       let sticky = navbar.offsetTop;
+       console.log(sticky + " inside navVariables")
+       // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+       function checkOffSet() {
+         let winHeight = getHeight();
+         if (document.body.scrollTop > winHeight || document.documentElement.scrollTop > winHeight) {
+           navbar.classList.add("sticky")
+         } else {
+           navbar.classList.remove("sticky");
+         }
+       }
+
+       return {
+         checkOffSet : checkOffSet
+       }
+
+     }());
+     // When the user scrolls the page, execute checkOffSet
+     window.onscroll = function() {
+        navVariables.checkOffSet();
+     };
+
 
 
 }; //End ready()

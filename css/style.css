@@ -1,0 +1,581 @@
+ /* ==========================================================================
+    Basic Rules
+    ========================================================================== */
+ *, *::before, *::after {
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+ }
+
+ html, body {
+   width: 100vw;
+   height: 100vh;
+ }
+
+ a:hover {
+   text-decoration: none;
+ }
+
+  a,
+  a:link,
+  a:visited {
+  color: #fff;
+ }
+
+ /* ==========================================================================
+    Header
+    ========================================================================== */
+    header {
+    }
+
+ /* =====
+  * Logo
+  * ===== */
+
+ /* =====
+  * Menu Bars
+  * ===== */
+
+ /* =====
+  * Navigation
+  * ===== */
+  .main-background {
+    background: linear-gradient(
+       rgba(0, 0, 0, 0.5),
+       rgba(0, 0, 0, 0.5)
+     ),
+     url("../img/mainBackground.jpg") no-repeat center;
+    background-size: cover;
+    overflow: hidden;
+  }
+
+  .main-nav {
+    /*opacity: .7;*/
+    background-image: linear-gradient(to right, transparent, black);
+  }
+
+  .nav-item:hover {
+    background-color: #80868C;
+  }
+
+  /* ==========================================================================
+     Profile section
+     ========================================================================== */
+
+  /*
+   * Size of the squares of the profile section
+   */
+  .profile-container,
+  .about-container  {
+    min-height: 31.25rem;
+  }
+  /*
+   * About article
+   */
+  .about {
+      /*font-size: 1.2rem;*/
+  }
+
+  .about-title {
+      margin: 2.5rem 0;
+  }
+
+  /*
+   * giving size to the profile image
+   */
+  .profile-photo {
+     background: url("../img/luis.jpg") no-repeat center;
+     background-size: cover;
+     height: 200px;
+     width: 200px;
+     /*margin-bottom: 5rem;*/
+   }
+
+   /* ==========================================================================
+       Skill Section
+      ========================================================================== */
+
+   .skill-container {
+     background-color: #eee;
+   }
+
+   /*
+    * gives a margin to have space between items
+    */
+
+   .list-inline-item {
+     margin: 1.5rem!important;
+   }
+
+   .skill-icon {
+     font-size: 6rem;
+   }
+
+   /* ==========================================================================
+      Portfolio Section
+      ========================================================================== */
+
+   /*
+    * makes the anchor tag to fulfill the parent container
+    */
+   .portfolio-item a {
+     display: block;
+     width: 100%;
+   }
+
+   /*
+    * makes the description area bigger to have room enough for the text
+    */
+   .description-container {
+     height: 4rem;
+     font-size: 1rem;
+   }
+
+   .portfolio-title {
+     width: 100%;
+   }
+
+   /* ==========================================================================
+      Portfolio Explanation Section
+      ========================================================================== */
+
+   /*.project-section-1,
+   .project-section-2 {
+     max-width: 31.06rem;
+   }*/
+
+   /*
+    * Gives some rome between content
+    */
+   .project-section-container {
+     margin-bottom: 6rem!important;
+   }
+
+   /*
+    * this size goves the text no more than 50 characters on each line
+    */
+   .project-section-text {
+     max-width: 29.06rem;
+   }
+
+   /*
+    * makes the project-title to be the whole width of the container to sit by itself in one line
+    */
+   .project-title-1 {
+     width: 100%;
+   }
+
+   /* ==========================================================================
+      Contact
+      ========================================================================== */
+      .contact {
+
+      }
+
+      .contact-information {
+
+      }
+
+      .contact-background {
+        position: relative;
+        min-height: 31.25rem;
+        background: linear-gradient(
+          rgba(0, 0, 0, 0.5),
+          rgba(0, 0, 0, 0.5)
+          ),
+          url(../img/laptop.jpg);
+        background-size: cover;
+        margin-bottom: 6rem;
+      }
+
+      /*
+       * Extra small devices change the font-size of the email text on the contact section to fit into the screen
+       */
+      .change-display {
+        font-size: 2rem!important;
+      }
+
+   /* ==========================================================================
+       back to top button
+      ========================================================================== */
+
+      .back-to-top {
+        display: none; /* Hidden by default */
+        position: fixed; /* Fixed/sticky position */
+        bottom: 80px; /* Place the button at the bottom of the page */
+        right: 30px; /* Place the button 30px from the right */
+        z-index: 99; /* Make sure it does not overlap */
+      }
+
+   /* ==========================================================================
+      Footer
+      ========================================================================== */
+   .footer {
+       /*Display none in order to make the fade in when scrolling more than 465 offset position*/
+       /*display: none;*/
+       /*position: fixed;*/
+       left: 0;
+       bottom: 0;
+       width: 100%;
+       height: 70px;
+       color: white;
+       background-color: black;
+     }
+
+     .section a {
+       display: block;
+       height: 100%;
+     }
+
+  /* ==========================================================================
+     Helper Classes
+     ========================================================================== */
+  /*
+   * Light blue background
+   */
+  .bg-light-blue {
+   background-color: #F1F9FF;
+  }
+
+  /*
+   * Extra large button
+   */
+  .btn-xl {
+    padding: 1rem 1.5rem;
+  }
+
+  /*
+   * Center the text inside the polaroid
+   */
+  .description-container {
+    text-align: center;
+    padding: 10px 20px;
+  }
+
+  /*
+   * Full size height and width 100%
+   */
+
+   .full-size {
+     height: 100%;
+     width: 100%;
+   }
+
+  /*Icons will vertically align with the text, play around with the top property*/
+  .icons {
+    position: relative;
+    top: 10px;
+  }
+
+ /*
+  * font-family kaushan script
+  */
+ .kaushan-script {
+   font-family: 'Kaushan Script', cursive;
+ }
+
+ /*
+  * Attempting a line break with css using block-level and ::before
+  */
+  .line-break::before {
+     content: "";
+     display: block;
+  }
+
+ /*
+  * margin-top 2rem
+  */
+  .mt-2rem {
+    margin-top: 2rem;
+  }
+
+  /*
+   * margin-bottom 2rem
+   */
+   .mb-2rem {
+     margin-bottom: 2rem;
+   }
+
+  /*
+   * forces the min-width to be 100%;
+   */
+  .minWidth100 {
+    min-width: 100%;
+  }
+
+ /*
+  * fix the orphan words, so it's not going to break to the next line
+  */
+  .nobr {
+    white-space: nowrap;
+  }
+
+
+
+ /*
+  * shadow at the bottom
+  */
+ .one-edge-shadow {
+    box-shadow: 0 8px 6px -6px black;
+ }
+
+ /*
+  * giving more padding than the bootstrap's default
+  */
+  .padding-2rem {
+     padding: 2rem;
+  }
+
+ /*
+  * Polaroid effect
+  */
+
+ .polaroid {
+   width: 80%;
+   background-color: white;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+               0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   margin-bottom: 25px;
+ }
+
+ /*
+  * Cursor pointer
+  */
+ .pointer {
+   cursor: pointer;
+ }
+
+ /*
+  * container of the portfolio-item floating left to make it responsive.
+  */
+ .responsive {
+    padding: 0 6px;
+    width: 100%;
+}
+
+ /*
+  * Shadow at the bottom
+  */
+  .shadow-bottom {
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+	  -moz-box-shadow: 0 10px 6px -6px #777;
+	  box-shadow: 0 10px 6px -6px #777;
+  }
+
+ /*
+  * Shadow around the element
+  */
+  .shadows-around {
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   }
+
+
+/*
+ * title centered in the middle of the viewport
+ */
+.title {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   color: white;
+   text-align: center;
+ }
+
+ /*
+  * 75% of the viewport Height
+  */
+ .vh-75 {
+   height: 75vh;
+ }
+
+ /*
+  * 80% of the viewport Height
+  */
+ .vh-80 {
+   height: 80vh;
+ }
+
+
+ /*
+  * 100% of the viewport Height
+  */
+ .vh-100 {
+   height: 100vh;
+ }
+
+ /*
+  * 50% of the viewport width
+  */
+  .vw-50 {
+    width: 50vw;
+  }
+
+ /*
+  * 75% of the viewport width
+  */
+  .vw-75 {
+    width: 75vw;
+  }
+
+ /* ==========================================================================
+  Media Queries
+  ========================================================================== */
+
+ /*// Extra small devices (portrait phones, less than 576px)
+ // No media query for `xs` since this is the default in Bootstrap
+ // Small devices (landscape phones, 576px and up)*/
+ @media (min-width: 576px) {
+   /*
+    * it makes sure that the number of characters is not more than 50 characters in one line,
+    * this container has an approximate width to hold the enough amount of characters
+    */
+   .about-text {
+     max-width: 28.75rem;
+   }
+
+   .project-section-image {
+     float: none;
+   }
+ }
+
+ /*// Medium devices (tablets, 768px and up)*/
+ @media (min-width: 768px) {
+
+   /*
+    * after lg breakpoint change the font-size of the the whole body to have a consistent bigger look
+    */
+   body {
+     font-size: 1.25rem;
+   }
+
+   /*
+    * intro paragraph in header
+    */
+   .intro-header {
+     width: 40vw;
+   }
+
+   /*
+    * change the width of both sections to fit in the same viewport width of the Profile Section
+    */
+    .profile-container {
+      width: 32%;
+    }
+
+    .about-container {
+      width: 64.5%;
+    }
+
+   /*
+    * change the width of the portfolio item to fit in the same viewport width, and giving a margin of 6px top and bottom when we have more than 2 items.
+    */
+   .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+
+   /*
+    * Changes the font-size
+    */
+    .portfolio-title {
+      font-size: 3.5rem;
+    }
+
+    /*
+     * becomes two columns layout , and gives some room between columns
+     */
+    .project-section {
+       width: 48%;
+    }
+
+    /*
+     * On tablet devices will float left to wrap the text around
+     */
+    .project-section-image {
+      float:left;
+      margin-right: 2rem!important;
+      margin-top: 0!important;
+      margin-bottom: .02rem!important;
+    }
+ }
+
+ /*// Large devices (desktops, 992px and up)*/
+ @media (min-width: 992px) {
+
+    /*
+     * after breakpoint change the font-size of the title
+     */
+     .main-title {
+       font-size: 6rem;
+     }
+
+     /*
+      * Sets the skill section to a fixed height to have more room vertically
+      */
+     .skill-container {
+       height: 32rem;
+     }
+
+     /*
+      * change the width of the portfolio item to fit in the same viewport width
+      */
+     .responsive {
+        width: 24.99999%;
+     }
+     /*
+      * gives a fixed height when it is in larger screens
+      */
+      .portfolio-container {
+        /*height: 37.5rem;*/
+        height: 27rem;
+      }
+
+     /*
+      * makes the project-title to be the whole width of the container to sit by itself in one line
+      */
+     .project-title-1 {
+       text-align: left!important;
+     }
+
+     .project-section-image {
+       float: none;
+       margin-right: 0!important;
+       margin-top: 1rem!important;
+       margin-bottom: 0!important;
+
+     }
+
+ }
+
+ /*// Extra large devices (large desktops, 1200px and up)*/
+ @media (min-width: 1200px) {
+
+ }
+
+ /*
+  * Clearfix: contain floats
+  *
+  * For modern browsers
+  * 1. The space content is one way to avoid an Opera bug when the
+  *    `contenteditable` attribute is included anywhere else in the document.
+  *    Otherwise it causes space to appear at the top and bottom of elements
+  *    that receive the `clearfix` class.
+  * 2. The use of `table` rather than `block` is only necessary if using
+  *    `:before` to contain the top-margins of child elements.
+  */
+
+ .clearfix:before,
+ .clearfix:after {
+     content: " "; /* 1 */
+     display: table; /* 2 */
+ }
+
+ .clearfix:after {
+     clear: both;
+ }

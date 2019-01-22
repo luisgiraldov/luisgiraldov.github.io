@@ -123,14 +123,7 @@
    /* ==========================================================================
       Portfolio Section
       ========================================================================== */
-
-   /*
-    * Resets the display: flex property put in large screens to its initial value
-    */
-   .portfolio-container {
-     display: initial;
-   }
-
+      
    /*
     * makes the anchor tag to fulfill the parent container
     */
@@ -343,10 +336,11 @@
   }
 
  /*
-  * giving more padding than the bootstrap's default
+  * giving more padding than the bootstrap's default to top and bottom
   */
-   .padding-6rem {
-      padding: 6rem;
+   .p-top-bottom-6rem {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
    }
 
  /*

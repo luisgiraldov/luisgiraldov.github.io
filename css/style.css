@@ -125,6 +125,13 @@
       ========================================================================== */
 
    /*
+    * Resets the display: flex property put in large screens to its initial value
+    */
+   .portfolio-container {
+     display: initial;
+   }
+
+   /*
     * makes the anchor tag to fulfill the parent container
     */
    .portfolio-item a {
@@ -194,7 +201,7 @@
           ),
           url(../img/laptop.jpg);
         background-size: cover;
-        margin-bottom: 6rem;
+        margin-bottom: 2rem;
       }
 
       /*
@@ -334,6 +341,13 @@
   .padding-2rem {
      padding: 2rem;
   }
+
+ /*
+  * giving more padding than the bootstrap's default
+  */
+   .padding-6rem {
+      padding: 6rem;
+   }
 
  /*
   * Polaroid effect
@@ -528,7 +542,7 @@
       * Sets the skill section to a fixed height to have more room vertically
       */
      .skill-container {
-       height: 32rem;
+       height: 50rem;
      }
 
      /*
@@ -537,12 +551,15 @@
      .responsive {
         width: 24.99999%;
      }
+
      /*
       * gives a fixed height when it is in larger screens
       */
       .portfolio-container {
-        /*height: 37.5rem;*/
-        height: 27rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 50rem;
       }
 
      /*

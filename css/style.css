@@ -9,7 +9,6 @@
 
  html, body {
    width: 100vw;
-   height: 100vh;
  }
 
  a:hover {
@@ -25,8 +24,6 @@
  /* ==========================================================================
     Header
     ========================================================================== */
-    header {
-    }
 
  /* =====
   * Logo
@@ -50,7 +47,6 @@
   }
 
   .main-nav {
-    /*opacity: .7;*/
     background-image: linear-gradient(to right, transparent, black);
   }
 
@@ -123,7 +119,7 @@
    /* ==========================================================================
       Portfolio Section
       ========================================================================== */
-      
+
    /*
     * makes the anchor tag to fulfill the parent container
     */
@@ -147,11 +143,6 @@
    /* ==========================================================================
       Portfolio Explanation Section
       ========================================================================== */
-
-   /*.project-section-1,
-   .project-section-2 {
-     max-width: 31.06rem;
-   }*/
 
    /*
     * Gives some rome between content
@@ -177,13 +168,6 @@
    /* ==========================================================================
       Contact
       ========================================================================== */
-      .contact {
-
-      }
-
-      .contact-information {
-
-      }
 
       .contact-background {
         position: relative;
@@ -204,16 +188,11 @@
         font-size: 2rem!important;
       }
 
-   /* ==========================================================================
-       back to top button
-      ========================================================================== */
-
-      .back-to-top {
-        display: none; /* Hidden by default */
-        position: fixed; /* Fixed/sticky position */
-        bottom: 80px; /* Place the button at the bottom of the page */
-        right: 30px; /* Place the button 30px from the right */
-        z-index: 99; /* Make sure it does not overlap */
+      /*
+       * when hovering on the social media icons change the color
+       */
+      .social-media-item:hover {
+        color: #80868C;
       }
 
    /* ==========================================================================
@@ -259,6 +238,13 @@
   .description-container {
     text-align: center;
     padding: 10px 20px;
+  }
+
+  /*
+   * change the font-size to see a bigger icon
+   */
+  .icon-font-size {
+    font-size: 1.5rem;
   }
 
   /*
@@ -318,8 +304,6 @@
   .nobr {
     white-space: nowrap;
   }
-
-
 
  /*
   * shadow at the bottom
@@ -391,7 +375,6 @@
                 0 6px 20px 0 rgba(0, 0, 0, 0.19);
    }
 
-
 /*
  * title centered in the middle of the viewport
  */
@@ -417,7 +400,6 @@
  .vh-80 {
    height: 80vh;
  }
-
 
  /*
   * 100% of the viewport Height

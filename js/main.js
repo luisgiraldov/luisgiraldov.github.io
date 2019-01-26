@@ -194,6 +194,19 @@
     });
     // End of showing the tooltip and popover
 
+    //navbar collapsing when clicking on any nav item
+    let navItems = document.querySelectorAll('.nav-link');
+    let navbarNav = document.getElementById('navbarNav');
+    for (let i=0, len = navItems.length; i < len; i++) {
+      navItems[i].addEventListener('click', hideNavbar);
+    }
+
+    //this function removes the show class, which is the one that shows the div with navbarNav ID
+    function hideNavbar() {
+      navbarNav.classList.remove('show');
+    }
+    //end of trying
+
 
   }; //End ready()
   window.onload = ready();
